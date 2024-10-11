@@ -1,9 +1,10 @@
-import homes from './Home.module.css';
+
 import React,{useState, useEffect, useRef} from 'react';
-import { Link } from 'react-router-dom';
-import { Box,Typography,Fade,Grid,Button,Card,CardActions,CardContent,CardMedia,Paper, CardHeader,TextField, Checkbox, FormControlLabel, FormGroup,Rating} from '@mui/material';
+import { Box,Typography,Fade,Grid,Button,Card,CardActions,CardContent,CardMedia,TextField,Rating} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+
 import vida from '../../Vida/Vida2.mp4';
 import ima9 from '../../Pics/images (9).jpeg';
 import ima7 from '../../Pics/images (7).jpeg';
@@ -12,6 +13,8 @@ import ima22 from '../../Pics/images (22).jpeg';
 import ima21 from '../../Pics/images (21).jpeg';
 import ima16 from '../../Pics/images (16).jpeg';
 import ima17 from '../../Pics/images (17).jpeg';
+import ima4 from '../../Pics/images (4).jpeg';
+
 export function Home(){
   const [name,setNname]=useState('');
   const[nameValid,setNameValid]=useState(true);
@@ -27,29 +30,9 @@ export function Home(){
   const[phoneError,setPhoneError]=useState('');
   const[thank,setThankyou]=useState('');
   const[thankDisplay,setThankyouDispaly]=useState(false);
-  // const [isVisible, setIsVisible] = useState(false);
-  // const fadeRef = useRef(null);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       if (entries[0].isIntersecting) {
-  //         setIsVisible(true);
-  //       }
-  //     },
-  //     { threshold: 0.2 } // Adjust this to change when the animation triggers (e.g., when 10% of the element is visible)
-  //   );
-
-  //   if (fadeRef.current) {
-  //     observer.observe(fadeRef.current);
-  //   }
-
-  //   return () => {
-  //     if (fadeRef.current) {
-  //       observer.unobserve(fadeRef.current);
-  //     }
-  //   };
-  // }, []);
+  
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [visibleBoxes, setVisibleBoxes] = useState({
     box1: false,
@@ -150,26 +133,33 @@ export function Home(){
         width: '100%',
         height: '100vh', // or any specific height you want
         overflow: 'hidden',
+        backgroundImage: isSmallScreen ? `url(${ima17})` : 'none', // Background image on small screens
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat:'no-repeat',
+
       }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          transform: 'translate(-50%, -50%)',
-          zIndex: -1,
-        }}
-      >
-        <source src={vida} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {!isSmallScreen && (
+        <video
+          autoPlay
+          loop
+          muted
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transform: 'translate(-50%, -50%)',
+            zIndex: -1,
+          }}
+        >
+          <source src={vida} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
       <Box
         sx={{
           position: 'relative',

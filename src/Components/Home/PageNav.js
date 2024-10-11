@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {Box,AppBar,Toolbar,IconButton,Menu,MenuList,MenuItem, Typography,List,ListItem,ListItemText,Stack} from '@mui/material';
+import {Box,AppBar,Toolbar,IconButton,Menu,MenuItem, Typography,Stack} from '@mui/material';
 import {MenuOutlined} from '@mui/icons-material';
 // import Icon from '@material-ui/core/Icon';
 // import { makeStyles } from '@material-ui/core/styles';
@@ -47,7 +47,7 @@ export function PageNav(){
           >
             {['Home', 'About', 'Services', 'Reservation'].map((text) => (
               <MenuItem onClick={handleMenuClose} key={text} sx={{textDecorationLine:'none'}}>
-                <Link to={`/${text.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
+                <Link  style={{ textDecoration: 'none', color: 'black' }}>
                   {text}
                 </Link>
               </MenuItem>
@@ -64,7 +64,7 @@ export function PageNav(){
                       
                         {['Home','About', 'Services', 'Reservation'].map((text) => (
                           < Typography component='span' sx={{padding:'1rem',textDecoration:'none'}}>
-                            <Link to={`/${text.toLowerCase()}`}  sx={{textDecoration:'none'}}>
+                            <Link   sx={{textDecoration:'none'}}>
                             <Typography  sx={{textDecoration:'none',fontSize:'0.8rem',color:'green'}} component='span'>{text}</Typography>
                             </Link>
                             </Typography>
