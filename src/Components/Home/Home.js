@@ -466,13 +466,31 @@ export function Home(){
    
     <Box ref={(el) => (fadeRefs.current[3] = el)} data-box="box4">
     <Fade in={visibleBoxes.box4} timeout={1000}>
-     <Box>
+     <Box 
+        sx={{
+          display: 'flex',          
+          justifyContent: 'center', 
+          alignItems: 'center',     
+          flexDirection: 'column',  
+          width: '100%',            
+          padding: 2,
+        }}
+     >
     
     <Typography variant='h4' sx={{textAlign:'center', color:'darkolivegreen',fontStyle:'bold'}}>
                     Where we are located
                     
                 </Typography>
-                <MapContainer center={position} zoom={13} style={{ height: '400px', width: '100%' }}>
+        <Box 
+           sx={{
+            width: '100%',          // Ensure the box takes full width
+            maxWidth: '900px',       // Constrain maximum width for larger screens
+            height: '400px',         // Set a fixed height
+            margin: '0 auto',        // Center the map on the page
+            overflow: 'hidden',      // Prevent any overflow issues
+          }}
+        >        
+                <MapContainer  center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
       {/* Tile layer using OpenStreetMap */}
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -486,6 +504,7 @@ export function Home(){
         </Popup>
       </Marker>
     </MapContainer>
+    </Box>
     </Box>
     </Fade>
     </Box>
