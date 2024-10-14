@@ -296,7 +296,7 @@ export function Home(){
                 <Box sx={{height:'0.1rem', width:'100%',backgroundColor:'black'}}></Box>
                 <Grid container columnSpacing={2} rowSpacing={2}>
                   <Grid item xs={12} sm={6} md={4}>
-                      <Card sx={{ borderRadius: '50%',backgroundColor:'lightgreen'}}>
+                      <Card sx={{ borderRadius: '10%',backgroundColor:'lightgreen'}}>
                             
                          <CardContent>
                           <Box sx={{padding:'10%'}}>
@@ -312,7 +312,7 @@ export function Home(){
                       </Card>
                   </Grid>
                   <Grid item xs={12} sm={6} md={4}>
-                     <Card sx={{ borderRadius: '50%',backgroundColor:'lightgreen'}}>
+                     <Card sx={{ borderRadius: '10%',backgroundColor:'lightgreen'}}>
                             
                          <CardContent>
                           <Box sx={{padding:'10%'}}>
@@ -328,7 +328,7 @@ export function Home(){
                       </Card>
                   </Grid>
                   <Grid item xs={12} sm={6} md={4}>
-                      <Card sx={{ borderRadius: '50%', backgroundColor:'lightgreen'}}>
+                      <Card sx={{ borderRadius: '10%', backgroundColor:'lightgreen'}}>
                             
                          <CardContent>
                           <Box sx={{padding:'10%'}}>
@@ -344,7 +344,7 @@ export function Home(){
                        
                   </Grid>
                   <Grid item xs={12} sm={6} md={4}>
-                    <Card sx={{ borderRadius: '50%',backgroundColor:'lightgreen'}}>
+                    <Card sx={{ borderRadius: '10%',backgroundColor:'lightgreen'}}>
                             
                          <CardContent>
                           <Box sx={{padding:'10%'}}>
@@ -360,7 +360,7 @@ export function Home(){
                       
                   </Grid>
                   <Grid item xs={12} sm={6} md={4}>
-                      <Card sx={{ borderRadius: '50%',backgroundColor:'lightgreen'}}>
+                      <Card sx={{ borderRadius: '10%',backgroundColor:'lightgreen'}}>
                             
                          <CardContent>
                           <Box sx={{padding:'10%'}}>
@@ -376,7 +376,7 @@ export function Home(){
                         
                   </Grid>
                   <Grid item xs={12} sm={6} md={4}>
-                  <Card sx={{ borderRadius: '50%',backgroundColor:'lightgreen'}}>
+                  <Card sx={{ borderRadius: '10%',backgroundColor:'lightgreen'}}>
                             
                             <CardContent>
                              <Box sx={{padding:'10%'}}>
