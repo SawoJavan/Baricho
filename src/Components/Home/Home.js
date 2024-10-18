@@ -179,7 +179,7 @@ export function Home(){
             Welcome to
         </Typography>
         <Typography sx={{textAlign:'center' ,fontSize:{xs:'2.3rem',sm:'3.3rem'}}} >
-            Baricho Mechanics Automotives.
+            Okello Mechanics Automotives.
         </Typography>
         <Typography variant='h6' sx={{textAlign:'center'}}>
             "We believe the key to effective service is working with the right Mechanics"

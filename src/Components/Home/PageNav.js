@@ -56,7 +56,7 @@ export function PageNav(){
 
                      
                 </Box>
-              <Typography variant='subtitle1' sx={{flexGrow:1,color:'black'}} component='p' >Baricho<Typography variant='h6' sx={{color:'green'}} component='span' >Mechanic</Typography></Typography>
+              <Typography variant='subtitle1' sx={{flexGrow:1,color:'black'}} component='p' >Okello<Typography variant='h6' sx={{color:'green'}} component='span' >Mechanic</Typography></Typography>
               
                  <Box  >
                  <Stack gap={2} direction='row'>
